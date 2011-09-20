@@ -1,0 +1,89 @@
+html {
+  background-color: White;
+  color: #333;
+}
+
+h1 { font-size: 120%; }
+
+a { color: RoyalBlue; }
+
+table .horizontalSeparator { border-top: 1px Solid Gray; }
+table .verticalSeparator { border-left: 1px Solid Gray; }
+
+#topMenu { margin: .8em 0; }
+.textPreviewCheckbox { display: block; margin: .8em 0; }
+.textPreviewCheckbox input { margin: 0; vertical-align: bottom; }
+.colorTablesMenu { margin-bottom: .8em; }
+
+.footer {
+  display: inline-block;
+  margin: 2em 0 1em;
+  border-top: 1px Solid Gray;
+  padding-top: .5em;
+}
+
+.colorTable {
+  border-spacing: 3px;
+  margin-left: -3px; }
+
+.colorTable th {
+  border: 1px Solid Gray;
+  padding: 0;
+  line-height: 2em;
+  font-weight: normal;
+}
+.colorTable td {
+  padding: 0;
+}
+.colorBlock {
+  padding: 0 .4em; /* $selectedPadding = .4em */
+}
+.colorBlock div {
+  margin: 0 -.4em; /* -$selectedPadding */
+  padding: 1px .6em;
+  line-height: 2em;
+  text-align: center;
+}
+
+.bgBlock span:before, .textColorBlock div:before { content: 'Preview'; }
+.textColorBlock div { background-color: White; }
+.bgBlock span { color: Black; }
+.bgBlock span { visibility: hidden; }
+.withTextPreview .bgBlock span { visibility: visible; }
+
+.colorTable .colorBlock { cursor: pointer; }
+.colorBlock.selected { padding: .4em; /* $selectedPadding */ }
+.colorBlock.selected div {
+  margin: -1px;
+  border: 1px Solid Gray;
+  padding: 1px .2em; /* .6em - $selectedPadding */
+  line-height: 1.2em; /* 2em - 2 * $selectedPadding */
+  position: relative;
+}
+.colorBlock.selected div:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom: 6px Solid Gray;
+	border-left: 6px Solid Transparent;
+}
+
+.colorTables {
+  white-space: nowrap;
+}
+.colorTables > * {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 2em;
+  white-space: normal;
+}
+.colorTables > *:first-child {
+  margin-left: 0;
+}
+
+.colorSelection h2 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0 0 .8em;
+}
